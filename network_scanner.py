@@ -17,6 +17,6 @@ def print_result(list_of_clients):
     for client in list_of_clients:
         print(client["IP"] + "\t\t" + client["MAC"])
 
-
-final_result= scan("192.168.1.1/24")
+Ip=input("plz enter ur IP/subnet: ")
+final_result= scan(Ip)
 print_result(final_result)
