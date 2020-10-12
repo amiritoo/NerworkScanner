@@ -8,7 +8,7 @@ def scan(ip):
     client_list=[]
 
     for element in answered_list :
-        client_dict= {"IP":element[1].psrc,"MAC":element[1].hwdst}
+        client_dict= {"IP":element[1].psrc,"MAC":element[1].hwsrc}
         client_list.append(client_dict)
     return client_list
 
@@ -17,6 +17,6 @@ def print_result(list_of_clients):
     for client in list_of_clients:
         print(client["IP"] + "\t\t" + client["MAC"])
 
-Ip=input("plz enter ur IP/subnet: ")
-final_result= scan(Ip)
+
+final_result= scan("192.168.1.1/24")
 print_result(final_result)
